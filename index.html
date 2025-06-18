@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Librería Ejemplo</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- https://fonts.google.com/icons -->
+    <style>
+        #autor {
+            font-size: 0.8em;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <!--*****ENCABEZADO*****-->
+    <header>
+        <a href="index.html">
+            <!--Imagen logo-->
+            <img style="width: 100px; margin-right: 20px;" src="./img/Logo.png" alt="Logo Ejemplo" />
+        </a>
+        <blockquote id="cita">
+            <p><b>“Leer es soñar con los ojos abiertos.”</b><br>
+                <span id="autor">Anónimo</span>
+            </p>
+        </blockquote>
+    </header>
+    <!--*****MENU NAVEGACION*****-->
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="material-icons">star</i>
+                    Inicio
+                </a>
+            </li>
+            <li>
+                <a href="posicionamiento.html">
+                    <i class="material-icons">settings_overscan</i>
+                    Posicionamiento
+                </a>
+            </li>
+            <li>
+                <a href="acercade.html">
+                    <i class="material-icons">info</i>
+                    Acerca de
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!--*****CONTENIDO*****-->
+    <div class="contenedor-principal">
+        <button class="sidenav-toggle" onclick="toggleSidenav()"> <i class="material-icons">menu</i></button>
+        <aside class="sidenav">
+            <h2>Navegación Rápida</h2>
+            <ul>
+                <li><a href="#catalogo">Catálogo</a></li>
+                <li><a href="#eventos">Eventos</a></li>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </aside>
+        <main>
+            <section id="catalogo" class="contenido">
+                <h1>Catálogo</h1>
+<!--Es necesario agregar un div-->
+                <div class="grid-catalogo">
+                    <article class="caja">
+                        <img src="img/libro1.jpeg" alt="Libro 1">
+                        <h2>Libro 1</h2>
+                        <p>Descripción del libro 1.</p>
+                    </article>
+                    <article class="caja">
+                        <img src="img/libro2.jpeg" alt="Libro 2">
+                        <h2>Libro 2</h2>
+                        <p>Descripción del libro 2.</p>
+                    </article>
+                    <article class="caja">
+                        <img src="img/libro3.jpeg" alt="Libro 2">
+                        <h2>Libro 3</h2>
+                        <p>Descripción del libro 3.</p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="eventos" class="contenido">
+                <h1>Eventos</h1>
+<!--Es necesario agregar un div-->
+                <div class="contenedor-listas">
+                    <article class="caja-lista">
+                        <!-- Lista desordenada (ul) -->
+                        <h3>Lista desordenada (ul)</h3>
+                        <ul>
+                            <li>Concierto de Rock</li>
+                            <li>Exposición de Arte</li>
+                            <li>Feria del Libro</li>
+                        </ul>
+                    </article>
+                    <article class="caja-lista">
+                        <!-- Lista ordenada (ol) -->
+                        <h3>Lista ordenada (ol)</h3>
+                        <ol>
+                            <li>Inscripción al evento</li>
+                            <li>Recepción de participantes</li>
+                            <li>Inicio de conferencias</li>
+                        </ol>
+                    </article>
+                    <article class="caja-lista">
+                        <!-- Lista de definición (dl) -->
+                        <h3>Lista de definición (dl)</h3>
+                        <dl>
+                            <dt>Concierto de Rock</dt>
+                            <dd>Evento musical con bandas locales y nacionales.</dd>
+                            <dt>Exposición de Arte</dt>
+                            <dd>Muestra de obras de artistas contemporáneos.</dd>
+                            <dt>Feria del Libro</dt>
+                            <dd>Venta y presentación de libros de diferentes géneros.</dd>
+                        </dl>
+                    </article>
+                </div>
+            </section>
+
+            <section id="novedades" class="contenido">
+                <h1>Novedades</h1>
+                <table border="1" cellpadding="8" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Fecha</th>
+                            <th>Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Lanzamiento Libro A</td>
+                            <td>10/05/2025</td>
+                            <td>Nuevo libro sobre tecnología y futuro.</td>
+                        </tr>
+                        <tr>
+                            <td>Evento de Firmas</td>
+                            <td>15/06/2025</td>
+                            <td>Firma de ejemplares con autores reconocidos.</td>
+                        </tr>
+                        <tr>
+                            <td>Descuento Especial</td>
+                            <td>01/07/2025</td>
+                            <td>Promoción en libros de ciencia ficción.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="contacto" class="contenido">
+                <h1>Contacto</h1>
+                <p>Dirección: Calle Ficticia 123, Alajuela</p>
+                <p>Teléfono: 1234-5678</p>
+                <p>Email: contacto@libreriaejemplo.com</p>
+            </section>
+        </main>
+    </div>
+    <!--*****PIE DE PAGINA*****-->
+    <footer>
+        <p>&copy; 2025 Librería Ejemplo</p>
+    </footer>
+    <script>
+        function toggleSidenav() {
+            document.querySelector('.sidenav').classList.toggle('open');
+        }
+    </script>
+</body>
+
+</html>
